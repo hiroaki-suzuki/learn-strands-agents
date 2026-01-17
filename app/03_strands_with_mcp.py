@@ -33,7 +33,7 @@ Strands Agent + FastMCP 連携サンプル
     └─────────────────────────────────────────────────────────────┘
 
 【実行方法】
-    cd app && uv run python 03_strands_with_mcp.py
+    cd app && uv run 03_strands_with_mcp.py
 
 【ポイント】
 - MCPサーバーは別プロセスとして起動される（stdioモード）
@@ -94,6 +94,7 @@ def get_current_time() -> str:
 # メイン処理
 # ============================================================
 def main():
+    """MCPツールを使うエージェントの動作例を順に実行します。"""
     print("=" * 60)
     print("Strands Agent + FastMCP 連携デモ")
     print("=" * 60)

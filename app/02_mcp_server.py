@@ -33,7 +33,7 @@ FastMCP サーバー: 天気情報を提供するMCPサーバー
     cd app && uv run fastmcp dev 02_mcp_server.py
 
     # サーバー起動 (stdioモード - Strands Agentから利用)
-    cd app && uv run python 02_mcp_server.py
+    cd app && uv run 02_mcp_server.py
 """
 
 from fastmcp import FastMCP
@@ -129,7 +129,9 @@ def get_forecast(city: str, days: int = 3) -> str:
 @mcp.resource("weather://cities")
 def list_cities() -> str:
     """利用可能な都市の一覧を返します。"""
-    return "利用可能な都市:\n" + "\n".join(f"  - {city}" for city in WEATHER_DATA.keys())
+    return "利用可能な都市:\n" + "\n".join(
+        f"  - {city}" for city in WEATHER_DATA.keys()
+    )
 
 
 # ============================================================

@@ -17,7 +17,7 @@ Strands Agents フレームワークの学習リポジトリ。
 cd app && uv sync
 
 # アプリケーション実行
-cd app && uv run python main.py
+cd app && uv run main.py
 
 # 依存関係の追加
 cd app && uv add <package-name>
